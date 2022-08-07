@@ -1,11 +1,11 @@
 jupyter==1.0.0
 nb_black==1.0.7
-numpy==1.22.0
-pandas==1.3.5
-meteostat==1.5.11
+numpy==1.23.1
+pandas==1.4.3
+meteostat==1.6.3
 altair==4.2.0
 matplotlib==3.5.2
 holidays==0.14.2
 statsmodels==0.13.2
-scikit-lego==0.6.11
-scikit-learn==1.1.1
+scikit-lego==0.6.12
+scikit-learn==1.1.2

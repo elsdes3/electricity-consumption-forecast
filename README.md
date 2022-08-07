@@ -3,7 +3,6 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/elsdes3/electricity-consumption-forecast)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/elsdes3/electricity-consumption-forecast/master/01_get_data_analyze.ipynb)
 ![CI](https://github.com/elsdes3/electricity-consumption-forecast/workflows/CI/badge.svg)
-![CodeQL](https://github.com/elsdes3/electricity-consumption-forecast/workflows/CodeQL/badge.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/mit)
 ![OpenSource](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
@@ -11,35 +10,33 @@
 
 ## [Table of Contents](#table-of-contents)
 0. [About](#about)
-   - [Project design](#project-design)
-     - [Objective](#objective)
-     - [Measure for the Objective](#measure-for-the-objective)
-     - [What about the business impact?](#what-about-the-business-impact?)
-   - [Baseline Algorithm](#baseline-algorithm)
-     - [Design](#design)
-   - [Algorithm](#algorithm)
+   - [Objective](#objective)
+   - [Business Use-Case](#business-use-case)
+   - [Implementation Details](#implementation-details)
+   - [Data](#data)
+   - [Model Requirements](#model-requirements)
 1. [Notebooks](#notebooks)
 2. [Project Organization](#project-organization)
 3. [References](#references)
 
 ## [About](#about)
-### Objective
+### [Objective](#objective)
 This project assesses the feasibility of using a ML model to forecast total electricity consumption data per country in 12 countries across Europe.
 
-### Business Use-Case
+### [Business Use-Case](#business-use-case)
 All countries in Europe have one TSO, except for [Germany which has four](https://www.next-kraftwerke.com/knowledge/european-tsos-list#:~:text=%20%20%20%20Country%20%20%20,%20%2072%20%2043%20more%20rows%20). A forecast of electricity usage over the medium term is useful for TSOs when setting up of a schedule for grid maintenance on a national scale. This forecast horizon helps TSOs plan their nation-wide [maintenance schedules](https://www.sciencedirect.com/science/article/abs/pii/S0378779620304855) by anticipating electricity demand during planned maintenance periods.
 
-### Implementation Details
+### [Implementation Details](#implementation-details)
 Train ML model to make and evaluate a medium-term aggregated (total) electricity demand forecast per country, for 12 countries in Europe.
 
 The feasibility of adopting an ML-based forecast will be assessed during a pilot study covering 2019-09-01 to 2019-09-30 in all 12 countries, during which nationwide plant maintenance is planned.
 
 When maintenance is completed, the grid should be brought back to its initial state as soon as possible. For this reason, the data frequency should be hourly.
 
-### Data
+### [Data](#data)
 Hourly electricity consumption data is available from 2015 to 2020. ML model development should be limited to using the bare minimum data for model training. So, the ML model will be trained using data from 2018-01-01 to 2019-08-31. This will capture any annual, and higher frequency, patterns in electricity usage.
 
-### Model Requirements
+### [Model Requirements](#model-requirements)
 The simplest ML model should be used in order to aid in
 - model explainability
 - prospective model deployment (should this be warranted based on performance of the forecast)
